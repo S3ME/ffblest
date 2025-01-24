@@ -41,4 +41,15 @@ class Home extends BaseController
         // Rendering View
         return view('profile', $data);
     }
+
+    public function page1()
+    {
+        // Parsing Data to View
+        $data                   = $this->data;
+        $data['title']          = 'Program DEKCBRA F2BLEST';
+        $data['description']    = 'Developed By Dismas Banar';
+
+        // Rendering View
+        return view('program/page-1', $data);
+    }
 }

@@ -44,7 +44,7 @@
                                         <div>- Pendidikan Lingkungan -</div>
                                     </div>
                                     <div class="uk-margin uk-width-medium uk-margin-auto uk-text-center">
-                                        <!-- <a class="el-content uk-button uk-button-text uk-text" href="">Selengkapnya</i></a> -->
+                                        <a class="el-content uk-button uk-button-text uk-text" href="page-1">Selengkapnya</i></a>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                         <div>- Sistem Pengelolaan sampah bebasis lingkungan desa -</div>
                                     </div>
                                     <div class="uk-margin uk-width-medium uk-margin-auto uk-text-center">
-                                        <!-- <a class="el-content uk-button uk-button-text uk-text" href="">Selengkapnya</i></a> -->
+                                        <a class="el-content uk-button uk-button-text uk-text" href="page-2">Selengkapnya</i></a>
                                     </div>
                                 </div>
                             </div>
@@ -93,54 +93,6 @@
                                             </a>
                                         </div>
                                     <?php } ?>
-                                        <!-- <div>
-                                            <a href="blog/</?=$blog['slug']?>">
-                                                <div class="uk-card uk-card-default uk-card-hover">
-                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/dummy1.png');">
-                                                        <img class="uk-hidden" src="images/dummy1.png" alt="</?=$blog['title']?>" />
-                                                    </div>
-                                                    <div class="uk-card-body">
-                                                        <h3 class="el-card-title">Di Rumah Tokoh Masyarakat</h3>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <a href="blog/</?=$blog['slug']?>">
-                                                <div class="uk-card uk-card-default uk-card-hover">
-                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/dummy2.png');">
-                                                        <img class="uk-hidden" src="images/dummy2.png" alt="</?=$blog['title']?>" />
-                                                    </div>
-                                                    <div class="uk-card-body">
-                                                        <h3 class="el-card-title">Membahas materi di kelas</h3>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <a href="blog/</?=$blog['slug']?>">
-                                                <div class="uk-card uk-card-default uk-card-hover">
-                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/dummy3.png');">
-                                                        <img class="uk-hidden" src="images/dummy3.png" alt="</?=$blog['title']?>" />
-                                                    </div>
-                                                    <div class="uk-card-body">
-                                                        <h3 class="el-card-title">Promosi Curik Bali sebagai Maskot Pulau Bali ke sekolah dan masyarakat</h3>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <a href="blog/</?=$blog['slug']?>">
-                                                <div class="uk-card uk-card-default uk-card-hover">
-                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/dummy4.png');">
-                                                        <img class="uk-hidden" src="images/dummy4.png" alt="</?=$blog['title']?>" />
-                                                    </div>
-                                                    <div class="uk-card-body">
-                                                        <h3 class="el-card-title">Kunjungan Guru MTs Gilimanuk</h3>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> -->
                                 </div>
                             </div>
                         </div>
@@ -160,7 +112,7 @@
                             <div class="uk-slider-container">
                                 <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid uk-height-match="target: > div > a > .uk-card > .uk-card-body">
                                     <div>
-                                        <a href="layanan#inhouse">
+                                        <!-- <a href="layanan#inhouse"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/dewan-pakar.jpg" alt="Dewan Pakar" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -170,10 +122,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Dewan Pakar</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#public">
+                                        <!-- <a href="layanan#public"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pembina.jpg" alt="Pembina" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -183,10 +135,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pembina</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#outbound">
+                                        <!-- <a href="layanan#outbound"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pengawas1.jpg" alt="Pengawas 1" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -196,10 +148,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pengawas</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#purnabakti">
+                                        <!-- <a href="layanan#purnabakti"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pengawas2.jpg" alt="Pengawas 2" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -209,10 +161,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pengawas</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#bnsp">
+                                        <!-- <a href="layanan#bnsp"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pengurus1.jpg" alt="Pengurus 1" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -222,10 +174,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pengurus</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#bnsp">
+                                        <!-- <a href="layanan#bnsp"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pengurus2.jpg" alt="Pengurus 2" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -235,10 +187,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pengurus</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#bnsp">
+                                        <!-- <a href="layanan#bnsp"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/pengurus3.jpg" alt="Pengurus 3" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -248,10 +200,10 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Pengurus</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                     <div>
-                                        <a href="layanan#bnsp">
+                                        <!-- <a href="layanan#bnsp"> -->
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-media-top">
                                                     <img src="images/master-fasilitator.jpg" alt="Master Fasilitator" style="width: 370px; height: 208px; object-fit: cover;" />
@@ -261,7 +213,7 @@
                                                     <div class="el-meta uk-text-meta uk-margin-small-top">Master Fasilitator</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!-- </a> -->
                                     </div>
                                 </div>
                             </div>

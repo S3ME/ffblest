@@ -54,6 +54,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('profil', 'Home::profile');
 $routes->get('gallery', 'Gallery::page');
+$routes->get('page-1', 'Home::page1');
 
 $routes->group('kegiatan', static function ($routes) {
     $routes->get('/', 'Kegiatan::index');
