@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-service('auth')->routes($routes);
+// service('auth')->routes($routes);
 
 // Backoffice
 // $routes->group('office', ['filter' => ['chain','group:superadmin,admin']], static function ($routes) {
@@ -53,11 +53,9 @@ service('auth')->routes($routes);
 
 $routes->get('/', 'Home::index');
 $routes->get('profil', 'Home::profile');
-$routes->get('layanan', 'Home::layanan');
 $routes->get('gallery', 'Gallery::page');
 
-// $routes->group('blog', static function ($routes) {
-//     $routes->get('/', 'Blog::index');
-//     $routes->get('(:any)', 'Blog::detail/$1');
-//     $routes->get('dummyarticle', 'Blog::dummyarticle');
-// });
+$routes->group('kegiatan', static function ($routes) {
+    $routes->get('/', 'Kegiatan::index');
+    $routes->get('(:any)', 'Kegiatan::detail/$1');
+});

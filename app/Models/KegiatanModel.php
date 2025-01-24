@@ -5,10 +5,10 @@ use CodeIgniter\Model;
 class KegiatanModel extends Model
 {
     protected $allowedFields = [
-        'title', 'slug', 'content', 'images', 'description', 'featured', 'highlight', 'created_at', 'updated_at', 'deleted_at',
+        'title', 'introtext', 'slug', 'content', 'images', 'description', 'featured', 'highlight', 'created_at', 'updated_at', 'deleted_at',
     ];
 
-    protected $table      = 'blog';
+    protected $table      = 'kegiatan';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';

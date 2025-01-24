@@ -44,7 +44,7 @@
                                         <div>- Pendidikan Lingkungan -</div>
                                     </div>
                                     <div class="uk-margin uk-width-medium uk-margin-auto uk-text-center">
-                                        <a class="el-content uk-button uk-button-text uk-text" href="/joomla/themes/district.white-turquoise/index.php/contact">Selengkapnya</i></a>
+                                        <!-- <a class="el-content uk-button uk-button-text uk-text" href="">Selengkapnya</i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                         <div>- Sistem Pengelolaan sampah bebasis lingkungan desa -</div>
                                     </div>
                                     <div class="uk-margin uk-width-medium uk-margin-auto uk-text-center">
-                                        <a class="el-content uk-button uk-button-text uk-text" href="/joomla/themes/district.white-turquoise/index.php/contact">Selengkapnya</i></a>
+                                        <!-- <a class="el-content uk-button uk-button-text uk-text" href="">Selengkapnya</i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -72,28 +72,28 @@
         <div class="uk-container uk-container-xlarge">
             <div class="tm-grid-expand uk-grid-column-large uk-grid-margin" uk-grid>
                 <div class="uk-light uk-width-1-4@m uk-text-right@m uk-text-left uk-flex-last@m">
-                    <h2 class="uk-position-relative uk-scrollspy-inview" style="top: 15px;" uk-scrollspy-class>Kegiatan Terbaru<br/>dari F2BLEST</h2>
+                    <h2 class="uk-position-relative uk-scrollspy-inview" style="top: 15px;" uk-scrollspy-class>Kegiatan Pilihan<br/>dari F2BLEST</h2>
                 </div>
                 <div class="uk-width-3-4@m">
                     <div uk-slider="autoplay: true; sets: true;">
                         <div class="uk-position-relative">
                             <div class="uk-slider-container">
                                 <div class="uk-slider-items uk-visible-toggle uk-child-width-1-2@m uk-grid" uk-height-match="target: > div > a > .uk-card > .uk-card-body">
-                                    <!-- </?php foreach ($blogs as $blog) { ?>
+                                    <?php foreach ($newses as $news) { ?>
                                         <div>
-                                            <a href="blog/</?=$blog['slug']?>">
+                                            <a href="kegiatan/<?=$news['slug']?>">
                                                 <div class="uk-card uk-card-default uk-card-hover">
-                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/blog/</?=$blog['images']?>');">
-                                                        <img class="uk-hidden" src="images/blog/</?=$blog['images']?>" alt="</?=$blog['title']?>" />
+                                                    <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/kegiatan/<?=$news['images']?>');">
+                                                        <img class="uk-hidden" src="images/kegiatan/<?=$news['images']?>" alt="<?=$news['title']?>" />
                                                     </div>
                                                     <div class="uk-card-body">
-                                                        <h3 class="el-card-title"></?=$blog['title']?></h3>
+                                                        <h3 class="el-card-title"><?=$news['title']?></h3>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
-                                    </?php } ?> -->
-                                        <div>
+                                    <?php } ?>
+                                        <!-- <div>
                                             <a href="blog/</?=$blog['slug']?>">
                                                 <div class="uk-card uk-card-default uk-card-hover">
                                                     <div class="uk-card-media-top uk-height-medium uk-background-cover" style="background-image:url('images/dummy1.png');">
@@ -140,7 +140,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> -->
                                 </div>
                             </div>
                         </div>

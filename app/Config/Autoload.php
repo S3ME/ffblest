@@ -41,8 +41,8 @@ class Autoload extends AutoloadConfig
      */
     public $psr4 = [
         APP_NAMESPACE           => APPPATH,
-        'Config'                => APPPATH . 'Config',
-        'CodeIgniter\\Shield'   => APPPATH . 'ThirdParty/shield-1.1.0',
+        // 'Config'                => APPPATH . 'Config',
+        // 'CodeIgniter\\Shield'   => APPPATH . 'ThirdParty/shield-1.1.0',
     ];
 
     /**
