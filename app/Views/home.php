@@ -28,7 +28,7 @@
             </div>
         </div>
     </section>
-    <section class="uk-section-muted uk-section uk-section-small" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-small; delay: false;">
+    <!-- <section class="uk-section-muted uk-section uk-section-small" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-small; delay: false;">
         <div class="uk-container uk-container-xlarge">
             <div class="uk-grid tm-grid-expand uk-child-width-1-1 uk-grid-margin">
                 <div class="uk-width-1-1@m">
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="uk-section-secondary uk-preserve-color uk-section" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-small; delay: false;">
         <div class="uk-container uk-container-xlarge">
             <div class="tm-grid-expand uk-grid-column-large uk-grid-margin" uk-grid>
