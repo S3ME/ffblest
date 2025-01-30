@@ -169,7 +169,7 @@
                                         if(intval($year) > date('Y')){ echo date('Y'); }
                                     }
                                     ?>
-                                    &copy copyright <?php auto_copyright("2024"); ?>. Yayasan Flora dan Fauna Bumi Lestari
+                                    &copy copyright <?php auto_copyright("2025"); ?>. Yayasan Flora dan Fauna Bumi Lestari
                                 </div>
                             </div>
                             <div class="uk-width-1-4@m">
@@ -184,6 +184,11 @@
                                             <div class="el-item uk-panel uk-margin-remove-first-child">
                                                 <a href="mailto:iinetworkbb@gmail.com" uk-icon="icon: mail" target="_blank"></a>
                                                 <!-- <a href="mailto:florafaunabumilestari@gmail.com" uk-icon="icon: mail" target="_blank"></a> -->
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="el-item uk-panel uk-margin-remove-first-child">
+                                                <a href="tel:081249419778" uk-icon="receiver" target="_blank"></a>
                                             </div>
                                         </div>
                                         <div>
@@ -204,11 +209,11 @@
                                                                     <button class="uk-button uk-button-primary uk-width-1-1" style="border-radius:30px;"><i uk-icon="whatsapp"></i> 081917015595</button>
                                                                 </a>
                                                             </div>
-                                                            <div class="uk-margin-small uk-margin-remove-top">
+                                                            <!-- <div class="uk-margin-small uk-margin-remove-top">
                                                                 <a href="https://wa.me/+621249419778" target="_blank">
                                                                     <button class="uk-button uk-button-primary uk-width-1-1" style="border-radius:30px;"><i uk-icon="whatsapp"></i> 081249419778</button>
                                                                 </a>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>

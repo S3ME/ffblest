@@ -18,7 +18,7 @@ class Gallery extends BaseController
         // Parsing Data to View
         $data                   = $this->data;
         $data['title']          = 'Daftar Galeri';
-        $data['description']    = 'Bawa ide aplikasi Anda menjadi kenyataan dengan Kodebiner! Kami membengun aplikasi sesuai dengan kebutuhan bisnis Anda.';
+        $data['description']    = 'Developed By Dismas Banar';
         $data['user']           = $user;
         $data['galleries']      = $galleries;
         $data['pager']          = $GalleryModel->pager;

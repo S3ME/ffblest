@@ -12,7 +12,6 @@ class Home extends BaseController
 
         // Populating Data
         $newses                 = $KegiatanModel->where('highlight', 1)->orderBy('created_at', 'DESC')->limit(4)->find();
-        // $newses                 = $KegiatanModel->orderBy('created_at', 'DESC')->limit(4)->find();
 
         // Parsing Data to View
         $data                   = $this->data;
@@ -26,20 +25,18 @@ class Home extends BaseController
 
     public function profile()
     {
-        // Calling Models
-        // $ClientModel = new ClientModel();
-
-        // Populating Data
-        // $clients = $ClientModel->findAll();
-
         // Parsing Data to View
         $data                   = $this->data;
         $data['title']          = 'Profil F2BLEST';
         $data['description']    = 'Developed By Dismas Banar';
-        // $data['clients']        = $clients;
 
         // Rendering View
         return view('profile', $data);
+    }
+
+    public function migration()
+    {
+        echo command('migrate --all');
     }
 
     public function page1()

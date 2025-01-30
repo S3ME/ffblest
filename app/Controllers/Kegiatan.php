@@ -69,206 +69,194 @@ class Kegiatan extends BaseController
         return view('kegiatan/detail', $data);
     }
     
-    // public function indexoffice()
-    // {
-    //     // Calling Models
-    //     $KegiatanModel  = new KegiatanModel();
+    public function indexoffice()
+    {
+        // Calling Models
+        $KegiatanModel  = new KegiatanModel();
 
-    //     // Populating Data
-    //     $user       = auth()->user();
-    //     $blogs      = $KegiatanModel->orderBy('created_at', 'DESC')->paginate(20, 'blogs');
+        // Populating Data
+        $user       = auth()->user();
+        $blogs      = $KegiatanModel->orderBy('created_at', 'DESC')->paginate(10, 'kegiatan');
 
-    //     // Parsing Data to View
-    //     $data                   = $this->data;
-    //     $data['title']          = 'Daftar Artikel';
-    //     $data['description']    = 'Bawa ide aplikasi Anda menjadi kenyataan dengan Kodebiner! Kami membengun aplikasi sesuai dengan kebutuhan bisnis Anda.';
-    //     $data['user']           = $user;
-    //     $data['blogs']          = $blogs;
-    //     $data['pager']          = $KegiatanModel->pager;
+        // Parsing Data to View
+        $data                   = $this->data;
+        $data['title']          = 'Daftar Artikel';
+        $data['description']    = 'Developed By Dismas Banar';
+        $data['user']           = $user;
+        $data['blogs']          = $blogs;
+        $data['pager']          = $KegiatanModel->pager;
 
-    //     // Rendering View
-    //     return view('office/blog', $data);
-    // }
+        // Rendering View
+        return view('office/blog', $data);
+    }
     
-    // public function indexadd()
-    // {
-    //     // Populating Data
-    //     $user       = auth()->user();
+    public function indexadd()
+    {
+        // Populating Data
+        $user       = auth()->user();
 
-    //     // Parsing Data to View
-    //     $data                   = $this->data;
-    //     $data['title']          = 'Formulir Tambah Artikel';
-    //     $data['description']    = 'Bawa ide aplikasi Anda menjadi kenyataan dengan Kodebiner! Kami membengun aplikasi sesuai dengan kebutuhan bisnis Anda.';
-    //     $data['user']           = $user;
+        // Parsing Data to View
+        $data                   = $this->data;
+        $data['title']          = 'Formulir Tambah Artikel';
+        $data['description']    = 'Developed By Dismas Banar';
+        $data['user']           = $user;
 
-    //     // Rendering View
-    //     return view('office/blog-add', $data);
-    // }
+        // Rendering View
+        return view('office/blog-add', $data);
+    }
 
-    // public function new()
-    // {
-    //     // Calling Models
-    //     $KegiatanModel  = new KegiatanModel();
+    public function new()
+    {
+        // Calling Models
+        $KegiatanModel  = new KegiatanModel();
 
-    //     // Populating Data
-    //     $input      = $this->request->getPost();
+        // Populating Data
+        $input      = $this->request->getPost();
 
-    //     // Validation Rules
-    //     $rules = [
-    //         'title'     => 'required|alpha_numeric_punct|is_unique[blog.title]',
-    //         'images'    => 'required'
-    //     ];
+        // Validation Rules
+        $rules = [
+            'title'     => 'required|alpha_numeric_punct|is_unique[kegiatan.title]',
+            'images'    => 'required'
+        ];
 
-    //     // Validating
-    //     if (!$this->validate($rules)) {
-    //         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    //     }
+        // Validating
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
         
-    //     // Processing data
-    //     if (isset($input['featured'])) {
-    //         $featured = 1;
-    //     } else {
-    //         $featured = 0;
-    //     }
-        
-    //     if (isset($input['highlight'])) {
-    //         $highlight = 1;
-    //     } else {
-    //         $highlight = 0;
-    //     }
+        // Processing data
+        if (isset($input['highlight'])) {
+            $highlight = 1;
+        } else {
+            $highlight = 0;
+        }
 
-    //     $slug = preg_replace('/\s+/', '-', $input['title']);
+        $slug = preg_replace('/\s+/', '-', $input['title']);
         
-    //     $insert = [
-    //         'title'         => $input['title'],
-    //         'slug'          => $slug,
-    //         'images'        => $input['images'],
-    //         'description'   => $input['description'],
-    //         'content'       => $input['content'],
-    //         'featured'      => $featured,
-    //         'highlight'     => $highlight
-    //     ];
-    //     $KegiatanModel->insert($insert);
+        $insert = [
+            'title'         => $input['title'],
+            'slug'          => $slug,
+            'images'        => $input['images'],
+            'description'   => $input['description'],
+            'introtext'     => $input['pendahuluan'],
+            'content'       => $input['content'],
+            'highlight'     => $highlight
+        ];
+        $KegiatanModel->insert($insert);
 
-    //     return redirect()->to('office/blog')->with('message', 'Artikel berhasil ditambahkan');
-    // }
+        return redirect()->to('office/blog')->with('message', 'Artikel berhasil ditambahkan');
+    }
     
-    // public function indexedit($id)
-    // {
-    //     // Calling Models
-    //     $KegiatanModel  = new KegiatanModel();
+    public function indexedit($id)
+    {
+        // Calling Models
+        $KegiatanModel  = new KegiatanModel();
 
-    //     // Populating Data
-    //     $user       = auth()->user();
-    //     $blog       = $KegiatanModel->find($id);
+        // Populating Data
+        $user       = auth()->user();
+        $blog       = $KegiatanModel->find($id);
 
-    //     // Parsing Data to View
-    //     $data                   = $this->data;
-    //     $data['title']          = 'Formulir Perubahan Artikel';
-    //     $data['description']    = 'Bawa ide aplikasi Anda menjadi kenyataan dengan Kodebiner! Kami membengun aplikasi sesuai dengan kebutuhan bisnis Anda.';
-    //     $data['user']           = $user;
-    //     $data['blog']           = $blog;
+        // Parsing Data to View
+        $data                   = $this->data;
+        $data['title']          = 'Formulir Perubahan Artikel';
+        $data['description']    = 'Developed By Dismas Banar';
+        $data['user']           = $user;
+        $data['blog']           = $blog;
 
-    //     // Rendering View
-    //     return view('office/blog-edit', $data);
-    // }
+        // Rendering View
+        return view('office/blog-edit', $data);
+    }
 
-    // public function edit($id)
-    // {
-    //     // Calling Models
-    //     $KegiatanModel = new KegiatanModel();
+    public function edit($id)
+    {
+        // Calling Models
+        $KegiatanModel = new KegiatanModel();
 
-    //     // Populating Data
-    //     $input  = $this->request->getPost();
-    //     $blog   = $KegiatanModel->find($id);
+        // Populating Data
+        $input  = $this->request->getPost();
+        $blog   = $KegiatanModel->find($id);
 
-    //     // Validation Rules
-    //     $rules = [
-    //         'title'     => 'required|alpha_numeric_punct|is_unique[blog.title,blog.id,'.$id.']',
-    //         'images'    => 'required'
-    //     ];
+        // Validation Rules
+        $rules = [
+            'title'     => 'required|alpha_numeric_punct|is_unique[kegiatan.title,kegiatan.id,'.$id.']',
+            'images'    => 'required'
+        ];
 
-    //     // Validating
-    //     if (!$this->validate($rules)) {
-    //         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    //     }
+        // Validating
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
 
-    //     // Processing Data
-    //     if (isset($input['featured'])) {
-    //         $featured = 1;
-    //     } else {
-    //         $featured = 0;
-    //     }
+        // Processing Data
+        if (isset($input['highlight'])) {
+            $highlight = 1;
+        } else {
+            $highlight = 0;
+        }
+
+        if ($blog['images'] != $input['images']) {
+            unlink('images/kegiatan/'.$blog['images']);
+        }
+
+        $update = [
+            'title'         => $input['title'],
+            'images'        => $input['images'],
+            'description'   => $input['description'],
+            'introtext'     => $input['pendahuluan'],
+            'content'       => $input['content'],
+            'highlight'     => $highlight
+        ];
+
+        $KegiatanModel->update($id, $update);
+
+        return redirect()->to('office/blog')->with('message', 'Artikel berhasil diperbarui.');
+    }
+
+    public function delete()
+    {
+        // Calling Models
+        $KegiatanModel  = new KegiatanModel();
+
+        // Populating Data
+        $input      = $this->request->getPost();
         
-    //     if (isset($input['highlight'])) {
-    //         $highlight = 1;
-    //     } else {
-    //         $highlight = 0;
-    //     }
+        // Validation Rules
+        $rules = [
+            'blog-id'  => 'required'
+        ];
 
-    //     if ($blog['images'] != $input['images']) {
-    //         unlink('images/blog/'.$blog['images']);
-    //     }
+        // Validating
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
 
-    //     $update = [
-    //         'title'         => $input['title'],
-    //         'images'        => $input['images'],
-    //         'description'   => $input['description'],
-    //         'content'       => $input['content'],
-    //         'featured'      => $featured,
-    //         'highlight'     => $highlight
-    //     ];
+        // Processing Data
+        $KegiatanModel->delete($input['blog-id']);
 
-    //     $KegiatanModel->update($id, $update);
+        return redirect()->back()->with('error', 'Artikel berhasil dihapus.');
+    }
 
-    //     return redirect()->to('office/blog')->with('message', 'Artikel berhasil diperbarui.');
-    // }
+    public function upload()
+    {
+        $input      = $this->request->getFile('upload');
 
-    // public function delete()
-    // {
-    //     // Calling Models
-    //     $KegiatanModel  = new KegiatanModel();
+        // Validation Rules
+        $rules = [
+            'upload'   => 'uploaded[upload]|is_image[upload]|max_size[upload,500]',
+        ];
 
-    //     // Populating Data
-    //     $input      = $this->request->getPost();
-        
-    //     // Validation Rules
-    //     $rules = [
-    //         'blog-id'  => 'required'
-    //     ];
+        // Validating
+        if (!$this->validate($rules)) {
+            http_response_code(400);
+            die(json_encode(array('message' => $this->validator->getErrors())));
+        }
 
-    //     // Validating
-    //     if (!$this->validate($rules)) {
-    //         return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-    //     }
+        if ($input->isValid() && !$input->hasMoved()) {
+            $filename = $input->getRandomName();
+            $input->move(FCPATH . '/images/kegiatan/', $filename);
 
-    //     // Processing Data
-    //     $KegiatanModel->delete($input['blog-id']);
-
-    //     return redirect()->back()->with('error', 'Artikel berhasil dihapus.');
-    // }
-
-    // public function upload()
-    // {
-    //     $input      = $this->request->getFile('upload');
-
-    //     // Validation Rules
-    //     $rules = [
-    //         'upload'   => 'uploaded[upload]|is_image[upload]|max_size[upload,500]',
-    //     ];
-
-    //     // Validating
-    //     if (!$this->validate($rules)) {
-    //         http_response_code(400);
-    //         die(json_encode(array('message' => $this->validator->getErrors())));
-    //     }
-
-    //     if ($input->isValid() && !$input->hasMoved()) {
-    //         $filename = $input->getRandomName();
-    //         $input->move(FCPATH . '/images/blog/', $filename);
-
-    //         // Returning Message
-    //         die(json_encode($filename));
-    //     }
-    // }
+            // Returning Message
+            die(json_encode($filename));
+        }
+    }
 }

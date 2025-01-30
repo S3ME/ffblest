@@ -6,50 +6,36 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-// service('auth')->routes($routes);
+service('auth')->routes($routes);
 
 // Backoffice
-// $routes->group('office', ['filter' => ['chain','group:superadmin,admin']], static function ($routes) {
-//     service('auth')->routes($routes);
-//     $routes->get('/', 'Office::index');
-//     $routes->group('client', static function ($routes) {
-//         $routes->get('/', 'Client::index');
-//         $routes->post('new', 'Client::new');
-//         $routes->post('edit/(:num)', 'Client::edit/$1');
-//         $routes->post('delete', 'Client::delete');
-//         $routes->post('upload', 'Client::upload');
-//     });
-//     $routes->group('agenda', static function ($routes) {
-//         $routes->get('/', 'Agenda::indexcat');
-//         $routes->get('edit-agenda-(:num)', 'Agenda::indexeditcat/$1');
-//         $routes->post('add-category', 'Agenda::createcat');
-//         $routes->post('edit-category-(:num)', 'Agenda::editcat/$1');
-//         $routes->get('delete-category', 'Agenda::deletecat');
-//         $routes->post('add-agenda', 'Agenda::createagenda');
-//         $routes->post('edit-agenda-(:num)', 'Agenda::editagenda/$1');
-//         $routes->get('delete-agenda', 'Agenda::deleteagenda');
-//     });
-//     $routes->group('blog', static function ($routes) {
-//         $routes->get('/', 'Blog::indexoffice');
-//         $routes->get('add', 'Blog::indexadd');
-//         $routes->get('edit-(:num)', 'Blog::indexedit/$1');
-//         $routes->post('new', 'Blog::new');
-//         $routes->post('edit/(:num)', 'Blog::edit/$1');
-//         $routes->post('delete', 'Blog::delete');
-//         $routes->post('upload', 'Blog::upload');
-//     });
-//     $routes->group('users', ['filter' => 'group:superadmin'], static function ($routes) {
-//         $routes->get('/', 'Users::index');
-//         $routes->post('new', 'Users::new');
-//         $routes->post('edit/(:num)', 'Users::edit/$1');
-//         $routes->post('delete', 'Users::delete');
-//     });
-//     $routes->group('gallery', static function ($routes) {
-//         $routes->get('/', 'Gallery::index');
-//         $routes->post('upload', 'Gallery::upload');
-//         $routes->post('delete', 'Gallery::delete');
-//     });
-// });
+$routes->group('office', ['filter' => ['chain','group:superadmin,admin']], static function ($routes) {
+    service('auth')->routes($routes);
+    $routes->get('/', 'Office::index');
+    $routes->group('migration', ['filter' => 'group:superadmin'], static function ($routes) {
+        $routes->get('/', 'Home::migration');
+    });
+    $routes->group('blog', static function ($routes) {
+        $routes->get('/', 'Kegiatan::indexoffice');
+        $routes->get('add', 'Kegiatan::indexadd');
+        $routes->get('edit-(:num)', 'Kegiatan::indexedit/$1');
+        $routes->post('new', 'Kegiatan::new');
+        $routes->post('edit/(:num)', 'Kegiatan::edit/$1');
+        $routes->post('delete', 'Kegiatan::delete');
+        $routes->post('upload', 'Kegiatan::upload');
+    });
+    $routes->group('users', ['filter' => 'group:superadmin'], static function ($routes) {
+        $routes->get('/', 'Users::index');
+        $routes->post('new', 'Users::new');
+        $routes->post('edit/(:num)', 'Users::edit/$1');
+        $routes->post('delete', 'Users::delete');
+    });
+    $routes->group('gallery', static function ($routes) {
+        $routes->get('/', 'Gallery::index');
+        $routes->post('upload', 'Gallery::upload');
+        $routes->post('delete', 'Gallery::delete');
+    });
+});
 
 $routes->get('/', 'Home::index');
 $routes->get('profil', 'Home::profile');
