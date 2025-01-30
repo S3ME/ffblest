@@ -12,9 +12,6 @@ service('auth')->routes($routes);
 $routes->group('office', ['filter' => ['chain','group:superadmin,admin']], static function ($routes) {
     service('auth')->routes($routes);
     $routes->get('/', 'Office::index');
-    $routes->group('migration', ['filter' => 'group:superadmin'], static function ($routes) {
-        $routes->get('/', 'Home::migration');
-    });
     $routes->group('blog', static function ($routes) {
         $routes->get('/', 'Kegiatan::indexoffice');
         $routes->get('add', 'Kegiatan::indexadd');
@@ -41,6 +38,9 @@ $routes->get('/', 'Home::index');
 $routes->get('profil', 'Home::profile');
 $routes->get('gallery', 'Gallery::page');
 $routes->get('page-1', 'Home::page1');
+
+// Migration
+$routes->get('migration', 'Home::migration');
 
 $routes->group('kegiatan', static function ($routes) {
     $routes->get('/', 'Kegiatan::index');
