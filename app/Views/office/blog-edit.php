@@ -223,7 +223,7 @@
                                     <span class="uk-link">pilih satu</span>
                                 </div>
                                 <br/>
-                                <span>Maks 500kb</span>
+                                <span>Maks 2MB</span>
                             </div>
                             <progress id="edit-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
                             <input id="images" name="images" value="<?=$blog['images']?>" hidden onchange="preview()" required />

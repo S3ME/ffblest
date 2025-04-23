@@ -218,7 +218,7 @@
                                     <span class="uk-link">pilih satu</span>
                                 </div>
                                 <br/>
-                                <span>Maks 500kb</span>
+                                <span>Maks 2MB</span>
                             </div>
                             <progress id="new-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
                             <input id="images" name="images" required onchange="preview()" hidden />
