@@ -242,7 +242,7 @@ class Kegiatan extends BaseController
 
         // Validation Rules
         $rules = [
-            'upload'   => 'uploaded[upload]|is_image[upload]|max_size[upload,500]',
+            'upload'   => 'uploaded[upload]|is_image[upload]|max_size[upload,2048]',
         ];
 
         // Validating
